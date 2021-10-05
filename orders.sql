@@ -27,4 +27,4 @@ SELECT COUNT (*) product_name FROM orders;
 SELECT product_price*quantity AS total_price FROM orders;
 
 -- Calculate the total order price by a single person_id.
-SELECT * FROM orders WHERE person_id = 718;
+SELECT SUM(product_price) FROM orders WHERE person_id = 718;
